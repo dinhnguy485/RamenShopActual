@@ -10,6 +10,10 @@ using System.Windows.Forms;
 using System.Threading;
 using System.Media;
 
+//Tri Nguyen
+//6th March 2024
+
+//Cash Register
 
 namespace RamenShop
 {
@@ -18,6 +22,7 @@ namespace RamenShop
         double ramenPrice = 11.25;
         double banhmiPrice = 8.75;
         double bobaPrice = 6.75;
+        double tax = 0;
         int numRamen;
         int numBanhmi;
         int numBoba;
@@ -36,7 +41,6 @@ namespace RamenShop
             line.Visible = false;
             error = new SoundPlayer(Properties.Resources.ERROR);
             titleLabel.Visible = false;
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -49,7 +53,6 @@ namespace RamenShop
                 numBanhmi = Convert.ToInt16(banhmiInput.Text);
                 numBoba = Convert.ToInt16(bobaInput.Text);
 
-
                 double banhmi = numBanhmi * banhmiPrice;
                 double ramen = numRamen * ramenPrice;
                 double boba = numBoba * bobaPrice;
@@ -59,7 +62,7 @@ namespace RamenShop
                 bobaReceipt = boba;
 
                 double subTotalPrice = (banhmi) + (ramen) + (boba);
-                double tax = subTotalPrice * 0.13;
+                tax = subTotalPrice * 0.13;
                 double totalPrice = subTotalPrice + tax;
                 money = totalPrice;
 
@@ -74,8 +77,6 @@ namespace RamenShop
                 totalOutput.Text = $"Error";
                 error.Play();
             }
-
-
         }
 
         private void changeButton_Click(object sender, EventArgs e)
@@ -103,9 +104,6 @@ namespace RamenShop
 
             
         }
-
-
-
         private void receiptButton_Click(object sender, EventArgs e)
 
             // when receipt button click, print receipt.
@@ -199,15 +197,7 @@ namespace RamenShop
                 error.Play();
             }
 
-
-
-
-
-
-          
-
         }
-
         private void neworderButton_Click(object sender, EventArgs e)
         {
             //when new order button is clicked reset the input to 0, reset all the label to " " (empty).
@@ -225,12 +215,6 @@ namespace RamenShop
             moneyPayed.Text = " ";
             changeOutput.Text = " ";
             receipt.Text = " ";
-
-
-
-
         }
-
-
     }
 }

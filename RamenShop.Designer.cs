@@ -327,7 +327,7 @@
             this.Controls.Add(this.ramenLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RamenShop";
-            this.Text = "Form1";
+            this.Text = "RamenShop";
             this.ResumeLayout(false);
             this.PerformLayout();
 
