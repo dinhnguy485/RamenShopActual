@@ -12,7 +12,6 @@ using System.Media;
 
 //Tri Nguyen
 //6th March 2024
-
 //Cash Register
 
 namespace RamenShop
@@ -33,7 +32,7 @@ namespace RamenShop
         double bobaReceipt;
         SoundPlayer error;
         
-
+        //when the program run's setting.
         public RamenShop()
         {
             InitializeComponent();
@@ -104,8 +103,8 @@ namespace RamenShop
 
             
         }
-        private void receiptButton_Click(object sender, EventArgs e)
 
+        private void receiptButton_Click(object sender, EventArgs e)
             // when receipt button click, print receipt.
         {
             try
@@ -196,8 +195,8 @@ namespace RamenShop
                 receipt.Text = $"ERROR";
                 error.Play();
             }
-
         }
+
         private void neworderButton_Click(object sender, EventArgs e)
         {
             //when new order button is clicked reset the input to 0, reset all the label to " " (empty).
